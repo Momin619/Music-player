@@ -127,8 +127,11 @@ window.addEventListener("keyup", (e) => {
     playBtn.style.transition = "0.2s all";
     playBtn.style.display = "block";
     pauseBtn.style.display = "none";
-
-    // Code to execute when the spacebar is pressed
+  } else if (e.key === "p") {
+    playBtn.style.transition = "0.2s all";
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "block";
+    audio.play();
   }
 
   if (audio.src.includes("sounds/mixkit-cat-walk-371.mp3")) {
