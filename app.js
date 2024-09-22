@@ -119,6 +119,7 @@ updateDescription();
 window.addEventListener("keyup", (e) => {
   console.log(e.key);
   if (e.key === "ArrowRight") {
+    co;
     playAudio();
   } else if (e.key === "ArrowLeft") {
     playAudio_2();
