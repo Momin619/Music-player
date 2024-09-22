@@ -117,15 +117,23 @@ updateDescription();
 // Making the keyboard event for playing the sounds
 
 window.addEventListener("keyup", (e) => {
+  console.log(e.key);
   if (e.key === "ArrowRight") {
     playAudio();
   } else if (e.key === "ArrowLeft") {
     playAudio_2();
+  } else if (e.key === " ") {
+    audio.pause();
+    playBtn.style.transition = "0.2s all";
+    playBtn.style.display = "block";
+    pauseBtn.style.display = "none";
+
+    // Code to execute when the spacebar is pressed
   }
 
-  // Conditions for updating the titles by using keyboard keys
-
   if (audio.src.includes("sounds/mixkit-cat-walk-371.mp3")) {
+    // Conditions for updating the titles by using keyboard keys
+
     description.innerHTML = title[0];
   } else if (audio.src.includes("sounds/mixkit-gimme-that-groove-872.mp3")) {
     description.innerHTML = title[1];
