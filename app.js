@@ -113,7 +113,7 @@ function updateDescription() {
 }
 
 updateDescription();
-
+console.log(number);
 // Making the keyboard event for playing the sounds
 
 window.addEventListener("keyup", (e) => {
