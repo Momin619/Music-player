@@ -1,0 +1,95 @@
+.background {
+  background-color: rgb(68, 68, 152);
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 20px;
+  border-top: 10px solid orange;
+  border-left: 10px solid orange;
+  border-right: 10px solid orange;
+  width: 99%;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  color: white;
+  font-size: 4rem;
+  display: block;
+  margin: auto;
+  width: max-content;
+  border-bottom: 7px solid black;
+  letter-spacing: 10px;
+}
+
+.bi {
+  color: white;
+  cursor: pointer;
+}
+.bi:hover {
+  color: black;
+  transition: 0.2s all;
+}
+
+.bi-play-fill {
+  position: absolute;
+  transition: 20s all;
+  overflow: hidden;
+  top: 40%;
+  left: 51.5%;
+  transform: translate(-50%, -50%);
+
+  font-size: 35rem;
+}
+
+.bi-pause {
+  font-size: 30rem;
+  transition: 20s all;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+.transition {
+  transition: 0.2s all;
+}
+
+.btns {
+  display: flex;
+  position: absolute;
+  top: 80%;
+  gap: 20rem;
+  justify-content: space-between;
+  left: 38.5%;
+  background-color: blue;
+  box-shadow: 2px 0px 5px 5px black;
+}
+
+.description-inner:hover {
+  background-color: white;
+  transition: 0.5s all;
+  border: none;
+}
+
+.description {
+  color: var(--bs-info);
+}
+
+.description-inner:hover .description {
+  color: var(--bs-primary);
+}
+.description-inner {
+  width: 25%;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  bottom: 30%;
+  left: 37%;
+  color: white;
+  border: 2px solid var(--bs-primary);
+  padding: 1rem;
+  border-radius: 20px;
+}
