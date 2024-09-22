@@ -123,15 +123,19 @@ window.addEventListener("keyup", (e) => {
   } else if (e.key === "ArrowLeft") {
     playAudio_2();
   } else if (e.key === " ") {
-    audio.pause();
-    playBtn.style.transition = "0.2s all";
-    playBtn.style.display = "block";
-    pauseBtn.style.display = "none";
-  } else if (e.key === "p") {
-    playBtn.style.transition = "0.2s all";
-    playBtn.style.display = "none";
-    pauseBtn.style.display = "block";
-    audio.play();
+    e.preventDefault();
+
+    if (audio.paused) {
+      playBtn.style.transition = "0.2s all";
+      playBtn.style.display = "block";
+      pauseBtn.style.display = "none";
+      audio.play();
+    } else {
+      playBtn.style.transition = "0.2s all";
+      playBtn.style.display = "none";
+      pauseBtn.style.display = "block";
+      audio.pause();
+    }
   }
 
   if (audio.src.includes("sounds/mixkit-cat-walk-371.mp3")) {
